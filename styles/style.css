@@ -11,5 +11,16 @@
 
 body{
 }
-.nabver{
+.common-color{
+   color: #03071280;
+}
+
+.common-green{
+    color: #1DD100;
+}
+.common-green-bg{
+    background-color: #1DD100;
+}
+.common-bg{
+    background-color: #F7F8F8;
 }
