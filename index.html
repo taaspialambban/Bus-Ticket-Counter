@@ -1,43 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bus-Ticket</title>
 
     <!-- Css -->
     <link rel="stylesheet" href="styles/style.css">
     <!-- Daisy Ui -->
-<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-white max-w-screen-lg mx-auto">
-    <header class="nabver px-5">
-        <div class="flex justify-between mx-auto font-Raleway">
-            <p class=" font-extrabold text-black text-3xl">P-Ticket</p>
-            <div class="space-x-5 font-medium text-[#030712B3] text-lg">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Destination</a>
-                <a href="">Search</a>
+    <header class="md:container md:mx-auto">
+        <div class="navbar">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="dropdown-content mt-3 w-52 p-2 space-x-5 font-medium text-[#030712B3] text-lg">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <a class="font-extrabold text-black text-3xl">P-Ticket</a>
             </div>
-            <div class="flex justify-center items-center space-x-2 px-3 border-4 bg-gradient-to-r from-[#1DD1001A] to-[#1DD10066] text-lime-600 font-bold">
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 space-x-5 font-medium text-[#030712B3] text-lg">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Search</a></li>
+                </ul>
+            </div>
+            <div
+                class="navbar-end flex justify-center items-center space-x-2 px-3 border-4 bg-gradient-to-r from-[#1DD1001A] to-[#1DD10066] text-lime-600 font-bold w-[100px]">
                 <p>Bus</p>
                 <img class="w-6" src="images/bus-icon.png" alt="">
             </div>
         </div>
     </header>
 
-    <main>
+    <main class="md:container md:mx-auto">
         <!-- Banner section -->
-         <section class="mt-10">
+        <section id="Buy-Now" class="mt-10">
             <div class="Z-5">
                 <img src="images/banner.png" alt="">
                 <div class=" w-[720px] text-center border border-red-700 z-10 -mt-96 h-[345px] mx-auto space-y-5">
                     <h2 class="  font-Raleway text-6xl font-extrabold text-white">End-to-End Travel with
-                        <br> <span class="text-[#1DD100]">P Paribahan</span></h2>
-                    <p class="font-inter text-lg font-normal text-white px-10">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-                    <button class="btn bg-[#1DD100] border-none text-black font-Raleway fot-bold text-xl">Buy Ticket</button>
+                        <br> <span class="text-[#1DD100]">P Paribahan</span>
+                    </h2>
+                    <p class="font-inter text-lg font-normal text-white px-10">Yes, you can run unit tests and view the
+                        results directly within the app. The integrated testing features allow for a streamlined .</p>
+                    <button id="click-btn" onclick="ClickButton()"
+                        class="btn bg-[#1DD100] border-none text-black font-Raleway fot-bold text-xl">Buy
+                        Ticket</button>
                 </div>
                 <div class="flex -mt-10 justify-center items-center gap-6">
                     <div class="flex px-8 rounded-3xl items-center gap-4 w-[308px] h-[138px] bg-white drop-shadow-md">
@@ -63,9 +90,9 @@
                     </div>
                 </div>
             </div>
-         </section>
-         <!-- offer section -->
-          <section class="mt-20">
+        </section>
+        <!-- offer section -->
+        <section class="mt-20">
             <h2 class="font-Raleway text-4xl font-bold text-black text-center">Best offers for you</h2>
             <div class="flex gap-6 mt-10 mx-auto">
                 <div class="flex rounded-3xl bg-[#FFBF0F] h-[180px] w-[493px]">
@@ -74,11 +101,11 @@
                         <span class="text-[#030712CC] font-medium">on your next purchase</span> <br>
                         <span class="text-[#03071280] font-medium">use by January 2024</span>
                     </div>
-                        <img src="images/cupon-devider.png" alt="">
+                    <img src="images/cupon-devider.png" alt="">
                     <div class="font-Raleway mx-10 my-12">
                         <span class="text-black font-bold text-3xl">NEW15</span> <br>
                         <span class="text-[#030712CC] font-medium">Coupon Code</span>
-                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="flex rounded-3xl bg-[#F78C9C] h-[180px] w-[493px]">
@@ -87,23 +114,28 @@
                             <span class="text-[#030712CC] font-medium">on your next purchase</span> <br>
                             <span class="text-[#03071280] font-medium">use by January 2024</span>
                         </div>
-                            <img src="images/cupon-devider.png" alt="">
+                        <img src="images/cupon-devider.png" alt="">
                         <div class="font-Raleway mx-10 my-12">
                             <span class="text-black font-bold text-3xl">NEW15</span> <br>
                             <span class="text-[#030712CC] font-medium">Coupon Code</span>
-                            </div>
+                        </div>
                     </div>
                     <div>
+                    </div>
+                    <div class="-ml-14">
+                        <button
+                            class="font-Raleway font-bold text-xl border-2 px-4 py-2 text-[#1DD100] border-[#1DD100] mt-10">See
+                            All Offers</button>
+                    </div>
                 </div>
-                <div class="-ml-14">
-                    <button class="font-Raleway font-bold text-xl border-2 px-4 py-2 text-[#1DD100] border-[#1DD100] mt-10">See All Offers</button>
-                </div>
-            </div>
-          </section>
-          <!-- service section -->
-           <section class="mt-20 text-center bg-gray-100">
+        </section>
+
+        <!-- service section -->
+        <section id="service-section" class="mt-20 text-center bg-gray-100">
             <h2 class="font-Raleway text-black font-bold text-4xl">P.H Paribahan</h2>
-            <h4 class="font-inter my-6 mx-auto w-[770px] text-[#03071299] text-lg font-normal">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</h4>
+            <h4 class="font-inter my-6 mx-auto w-[770px] text-[#03071299] text-lg font-normal">Yes, you can run unit
+                tests and view the results directly within the app. The integrated testing features allow for a
+                streamlined .</h4>
             <!-- Ticket Price -->
             <div class="flex bg-white">
                 <div class=" mt-8 mx-5">
@@ -114,14 +146,16 @@
                             </div>
                             <div>
                                 <h2 class="text-black font-Raleway font-bold text-3xl">Greenline Paribahan</h2>
-                                <p class="text-[#03071299] text-lg font-normal font-inter">Coach-009-WEB ! AC_Business</p>
+                                <p class="text-[#03071299] text-lg font-normal font-inter">Coach-009-WEB ! AC_Business
+                                </p>
                             </div>
                         </div>
                         <div class="flex justify-center items-center h-10 px-4 bg-slate-300">
                             <div class="w-10">
                                 <img src="images/seat-green.png" alt="">
                             </div>
-                            <h2 class="text-lg font-inter font-medium text-[#1DD100]">40 Seats left</h2>
+                            <h2 id="seat-counter" class="text-lg font-inter font-medium text-[#1DD100]">40 Seats left
+                            </h2>
                         </div>
                     </div>
                     <div class="bg-gray-100 mt-5 px-14">
@@ -136,12 +170,15 @@
                         </div>
                         <hr>
                         <div class="flex justify-between items-center font-inter py-5 gap-4">
-                            <button class="text-sm rounded-xl text-[#030712CC] font-medium p-4 bg-[#0307120D]">Boarding Point - Laxmipur
+                            <button class="text-sm rounded-xl text-[#030712CC] font-medium p-4 bg-[#0307120D]">Boarding
+                                Point - Laxmipur
                             </button>
-                            <button class="text-sm rounded-xl text-[#030712CC] font-medium p-4 bg-[#0307120D]">Dropping Point - Bogura</button>
-                            <button class="text-sm rounded-xl text-[#030712CC] font-medium p-4 bg-[#0307120D]">Est. Time - 11 Hour</button>
+                            <button class="text-sm rounded-xl text-[#030712CC] font-medium p-4 bg-[#0307120D]">Dropping
+                                Point - Bogura</button>
+                            <button class="text-sm rounded-xl text-[#030712CC] font-medium p-4 bg-[#0307120D]">Est. Time
+                                - 11 Hour</button>
                         </div>
-                        
+
                     </div>
                 </div>
                 <img src="images/info-devider.png" alt="">
@@ -149,16 +186,16 @@
                     <img src="images/fare.png" alt="">
                     <h2 class="font-Raleway">
                         <span class="font-semibold text-black text-2xl">550 Taka</span> <br>
-                            <span class="font-medium text-[#03071299] text-xl">Per Seat</span>
-                        </h2>
+                        <span class="font-medium text-[#03071299] text-xl">Per Seat</span>
+                    </h2>
                 </div>
             </div>
 
             <!-- Count Seat -->
-             <div class="flex gap-5 bg-white mt-10 pl-6 hidden">
-                <!-- Count seat part 1 -->
-                <div >
+            <div id="seat-price" class="flex gap-5 bg-white mt-10 pl-6">
 
+                <!-- Count seat part 1 -->
+                <div>
                     <h1 class="font-Raleway text-2xl font-semibold text-black text-left ">Select Your Seat</h1>
                     <hr class=" mt-3 border-2 border-dashed common-color">
                     <div class="flex justify-between items-center mt-5">
@@ -172,155 +209,167 @@
                         </div>
                     </div>
                     <hr class=" mt-3 border-2 border-dashed common-color">
-                    <div class="mt-9 grid grid-cols-5 items-center gap-9">
-                            <p>A</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">A1</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">A2</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">A3</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">A4</p>
-                            <p>B</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">B1</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">B2</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">B3</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">B4</p>
-                            <p>C</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">C1</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">C2</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">C3</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">C4</p>
-                            <p>D</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">D1</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">D2</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">D3</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">D4</p>
-                            <p>E</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">E1</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">E2</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">E3</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">E4</p>
-                            <p>F</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">F1</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">F2</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">F3</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">F4</p>
-                            <p>G</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">G1</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">G2</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">G3</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">G4</p>
-                            <p>H</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">H1</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">H2</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">H3</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">H4</p>
-                            <p>I</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">I1</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">I2</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">I3</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">I4</p>
-                            <p>J</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">J1</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">J2</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">J3</p>
-                            <p class="common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">J4</p>
+                    <div id="common-seat" class="mt-9 grid grid-cols-5 items-center gap-9">
+                        <p id = "common-btn"  class="common-btn">A</p>
+                        <p id = "common-btn" class="common-btn common-bg common-color font-inter border-2 rounded-xl px-7 py-3">A1</p>
+                        <p id = "common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">A2</p>
+                        <p id = "common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">A3</p>
+                        <p id = "common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">A4</p>
+                        <p id = "common-btn" class="common-btn">B</p>
+                        <p id = "common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">B1</p>
+                        <p id = "common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">B2</p>
+                        <p id = "common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">B3</p>
+                        <p id = "common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">B4</p>
+                        <p id = "common-btn" class="common-btn">C</p>
+                        <p id = "common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">C1</p>
+                        <p id="common-btn"  class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">C2</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">C3</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">C4</p>
+                        <p id="common-btn" class="common-btn">D</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">D1</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">D2</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">D3</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">D4</p>
+                        <p id="common-btn" class="common-btn">E</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">E1</p>
+                        <p id="common-btn" id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">E2</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">E3</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">E4</p>
+                        <p id="common-btn" class="common-btn">F</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">F1</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">F2</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">F3</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">F4</p>
+                        <p id="common-btn" class="common-btn">G</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">G1</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">G2</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">G3</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">G4</p>
+                        <p id="common-btn" class="common-btn">H</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">H1</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">H2</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">H3</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-7 py-3">H4</p>
+                        <p id="common-btn" class="common-btn">I</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">I1</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">I2</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter border-2 rounded-xl px-8 py-3">I3</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">I4</p>
+                        <p id="common-btn" class="common-btn">J</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">J1</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">J2</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">J3</p>
+                        <p id="common-btn" class="common-btn common-bg common-color font-inter  border-2 rounded-xl px-8 py-3">J4</p>
                     </div>
                 </div>
-                
-                <!-- count seat part 2 -->
-               <div>
-                <h1 class="font-Raleway text-2xl font-semibold text-black text-left ">Select Your Seat</h1>
-                <hr class=" mt-3 border-2 border-dashed common-color">
-                <div class="font-inter px-4 py-6 mt-6 rounded-xl bg-gray-100">
-                    <div class="flex justify-between text-black font-semibold items-center mb-3">
-                        <h2>Seat <span class="common-green-bg text-white px-3 rounded-md">2</span></h2>
-                        <p>Class</p>
-                        <p>Price</p>
-                    </div>
-                    <hr class="border-2 border-dashed mb-5 common-color">
-                    
-                    <div class="flex justify-between mb-2 items-center">
-                        <h2>C2</h2>
-                    <p>Economoy</p>
-                    <p>550</p>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <h2>C2</h2>
-                    <p>Economoy</p>
-                    <p>550</p>
-                    </div>
-                    <hr class=" mt-3 border-2 border-solid common-color">
-                    <div class="flex justify-between text-black font-semibold items-center mt-2">
-                        <p>Total Price</p>
-                        <p>BDT 1100</p>
-                    </div>
-                    <div class="w-full flex justify-center my-8 bg-white rounded-xl">
-                        <input class="w-4/5 rounded-xl text-center text-white h-[26] bg-white px-5 py-6" type="text" name="" id="" placeholder="Have any copupon?">
-                        <button class="common-green-bg w-[120px] mt-2 mr-3 h-[56px] font-semibold text-white rounded-lg">Apply</button>
-                    </div>
-                    <div class="flex justify-between text-black font-semibold items-center mt-2">
-                        <p>Grand Total</p>
-                        <p>BDT 1100</p>
-                    </div>
-                    
-                    <!-- input type -->
-                    <div class="font-inter mt-6 bg-white">
-                        <label class="form-control w-full max-w-xs">
-                            <div class="label">
-                              <span class="text-black font-bold text-base">Passenger Name*</span>
-                            </div>
-                            <input type="text" placeholder="Enter your name" class="input bg-white border-2 border-gray-200 p-5 h-[34] w-full " />
-                          </label>
-                        <label class="form-control mt-4 w-full max-w-xs">
-                            <div class="label">
-                              <span class="text-black font-bold text-base">Phone Number*</span>
-                            </div>
-                            <input type="number" class="input bg-white border-2 border-gray-200 p-5 h-[34] w-full" name="" id="" placeholder="Enter your phone number">
-                          </label>
-                        <label class="form-control mt-4 w-full max-w-xs">
-                            <div class="label">
-                              <span class="text-black font-bold text-base">Email ID</span>
-                            </div>
-                            <input class="input bg-white border-2 border-gray-200 p-5 h-[34] w-full" type="email" name="" id="" placeholder="Enter your email id">
-                          </label>
-                          <button class="common-green-bg text-white font-Raleway text-xl font-extrabold w-[442px] h-[65px] rounded-2xl mt-6">Next</button>
-                          <div class="flex justify-around mt-6 font-inter common-color font-normal text-xl">
-                            <div>
-                                <p>
-                                    Terms and Conditions
-                                    <hr class="border-2 border-gray-400">
-                                </p>
-                            </div>
-                            <div>
-                                <p>
-                                    Cancellation Policy
-                                    <hr class="border-2 border-gray-400">
-                                </p>
-                            </div>
-                          </div>
-                    </div>
-                </div>
-                </div>
-               </div>
-                
-             </div>
 
-             <!-- success section -->
-              <div class="flex justify-center items-center">
-                <div class="w-[618px] h-[481px] space-y-5 bg-white text-center border-2 border-gray-400 mx-auto my-20">
-                    <div class="px-60 mt-8">
-                        <img src="images/success.png" alt="">
+                <!-- count seat part 2 -->
+                <div>
+                    <h1 class="font-Raleway text-2xl font-semibold text-black text-left ">Select Your Seat</h1>
+                    <hr class=" mt-3 border-2 border-dashed common-color">
+                    <div class="font-inter px-4 py-6 mt-6 rounded-xl bg-gray-100">
+                        <div class="flex justify-between text-black font-semibold items-center mb-3">
+                            <h2 id="Seat-Selected" class="seat-selected">Seat <span
+                                    class="common-green-bg text-white px-3 rounded-md">0</span></h2>
+                            <p>Class</p>
+                            <p>Price</p>
+                        </div>
+                        <hr class="border-2 border-dashed mb-5 common-color">
+
+                        <div class="flex justify-between mb-2 items-center">
+                            <!-- <h2>C2</h2>
+                            <p>Economoy</p>
+                            <p>550</p> -->
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <!-- <h2>C2</h2>
+                            <p>Economoy</p>
+                            <p>550</p> -->
+                        </div>
+                        <hr class=" mt-3 border-2 border-solid common-color">
+                        <div class="flex justify-between text-black font-semibold items-center mt-2">
+                            <p>Total Price</p>
+                            <p>BDT 000</p>
+                        </div>
+                        <div class="w-full flex justify-center my-8 bg-white rounded-xl">
+                            <input class="w-4/5 rounded-xl text-center text-white h-[26] bg-white px-5 py-6" type="text"
+                                name="" id="" placeholder="Have any copupon?">
+                            <button
+                                class="common-green-bg w-[120px] mt-2 mr-3 h-[56px] font-semibold text-white rounded-lg">Apply</button>
+                        </div>
+                        <div class="flex justify-between text-black font-semibold items-center mt-2">
+                            <p>Grand Total</p>
+                            <p>BDT 000</p>
+                        </div>
+
+                        <!-- input type -->
+                        <div class="font-inter mt-6 bg-white">
+                            <label class="form-control w-full max-w-xs">
+                                <div class="label">
+                                    <span class="text-black font-bold text-base">Passenger Name*</span>
+                                </div>
+                                <input type="text" placeholder="Enter your name"
+                                    class="input bg-white border-2 border-gray-200 p-5 h-[34] w-full " />
+                            </label>
+                            <label class="form-control mt-4 w-full max-w-xs">
+                                <div class="label">
+                                    <span class="text-black font-bold text-base">Phone Number*</span>
+                                </div>
+                                <input type="number" class="input bg-white border-2 border-gray-200 p-5 h-[34] w-full"
+                                    name="" id="" placeholder="Enter your phone number">
+                            </label>
+                            <label class="form-control mt-4 w-full max-w-xs">
+                                <div class="label">
+                                    <span class="text-black font-bold text-base">Email ID</span>
+                                </div>
+                                <input class="input bg-white border-2 border-gray-200 p-5 h-[34] w-full" type="email"
+                                    name="" id="" placeholder="Enter your email id">
+                            </label>
+                            <button
+                                class="common-green-bg text-white font-Raleway text-xl font-extrabold w-[442px] h-[65px] rounded-2xl mt-6">Next</button>
+                            <div class="flex justify-around mt-6 font-inter common-color font-normal text-xl">
+                                <div>
+                                    <p>
+                                        Terms and Conditions
+                                        <hr class="border-2 border-gray-400">
+                                    </p>
+                                </div>
+                                <div>
+                                    <p>
+                                        Cancellation Policy
+                                        <hr class="border-2 border-gray-400">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <button class="border-2 border-dashed border-gray-200 w-[590px] font-Raleway common-green text-2xl font-bold">success</button>
-                    <p>
-                        <span class="text-[#4A4A4A] font-semibold text-xl">
-                        Thank you for Booking Our Bus Seats. <br>
-                        We are working hard to find the best service and deals for you. 
-                    </span><br>
-                        <span class="text-slate-500 text-lg font-medium">Shortly you will find a confirmation in your email.</span></p>
-                        <button class="bg-[#27AE60] w-[300px] h-[55.99px] rounded-3xl text-white font-Raleway text-xl font-semibold">continue</button>
                 </div>
-              </div>
-           </section>
+            </div>
+            </div>
+        </section>
+
+        <!-- success section -->
+        <section id="success-count" class="bg-gray-100">
+            <div class="flex justify-center items-center"></div>
+            <div class="w-[618px] h-[481px] space-y-5 bg-white text-center border-2 border-gray-400 mx-auto my-20">
+                <div class="px-60 mt-8">
+                    <img src="images/success.png" alt="">
+                </div>
+                <button
+                    class="border-2 border-dashed border-gray-200 w-[590px] font-Raleway common-green text-2xl font-bold">success</button>
+                <p>
+                    <span class="text-[#4A4A4A] font-semibold text-xl">
+                        Thank you for Booking Our Bus Seats. <br>
+                        We are working hard to find the best service and deals for you.
+                    </span><br>
+                    <span class="text-slate-500 text-lg font-medium">Shortly you will find a confirmation in your
+                        email.</span>
+                </p>
+                <button
+                    class="bg-[#27AE60] w-[300px] h-[55.99px] rounded-3xl text-white font-Raleway text-xl font-semibold">continue</button>
+            </div>
+            </div>
+        </section>
     </main>
 
     <footer></footer>
@@ -329,4 +378,5 @@
     <script src="script/Ticket.js"></script>
     <script src="script/script.js"></script>
 </body>
+
 </html>
