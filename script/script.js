@@ -1,9 +1,11 @@
 
+
+
+
 function ClickButton(params) {
   const ticket = document.getElementById('service-section');
-  console.log(ticket)
-
-
-  HideElementById('Buy-Now');
-  ShowElementById('service-sections')
+ 
+  // const hideElement = HideElementById('Buy-Now');
+  // const showelement = ShowElementById('service-section');
+  SetBackGroundColor(allClass)
 }
