@@ -7,5 +7,4 @@ function ClickButton(params) {
  
   // const hideElement = HideElementById('Buy-Now');
   // const showelement = ShowElementById('service-section');
-  SetBackGroundColor(allClass)
 }

@@ -40,16 +40,61 @@ li.appendChild(h1);
 li.appendChild(p2);
 
 SelectedContainer.appendChild(li);
-const totalCost = document.getElementById('total-price');
-const ConvertedTotalCost = parseInt(totalCost);
-document.getElementById('total-price').innerText = ConvertedTotalCost + parseInt(seatPrice)
+
+const totalPrice = document.getElementById
+('total-money').innerText;
+const ConvertedTotalPrice = parseInt(totalPrice);
+const sum = ConvertedTotalPrice + parseInt(seatPrice);
+SetInnerText('total-money', sum);
+
+
+const grandTotal = document.getElementById('Grand-price').innerText;
+const ConvertedGrandTotalPrice = parseInt(grandTotal);
+const sum2 = ConvertedGrandTotalPrice + parseInt(seatPrice);
+console.log(sum2)
+SetInnerText('Grand-price',sum2)
 })
+
 Class.addEventListener('click', function(e){
     seat = seat +1
     SetInnerText('Seat-Selected',seat);
     
 })
 }
+
+
+// function CouponCard(params) {
+//     document.getElementById('delete-confirm').addEventListener('keyup',function (event) {
+//         const text = event.target.value
+//         console.log(text)  
+//       })
+// }
+document.getElementById('delete-confirm').addEventListener('keyup',function (event) {
+    const text = event.target.value
+    // console.log(text)
+    const CouponBtn = document.getElementById('Disable-btn')
+    if(text === 'New15' || text === 'couple20'){
+        CouponBtn.removeAttribute('disabled')
+    }  
+    else{
+        CouponBtn.setAttribute('disabled')
+    }
+  })
+
+const price = 5000;
+if(price >= 5000){
+    const discount = price * 10/100;
+    const payAmount = price - discount
+}
+  
+
+// function Coupon() {
+//     document.getElementById("delete-confirm").addEventListener("keyup",function (e) {
+//         const text = e.target.value;
+//         console.log(text)
+//     })
+// }
+
 
 function SetInnerText(id, value) {
     document.getElementById(id).innerText = value;

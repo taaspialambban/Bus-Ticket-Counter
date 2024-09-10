@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="delete-confirm" type="text" placeholder="Type your coupon">
+    <button id="confirm-coupon" disabled>Coupon</button>
+    <script>
+        document.getElementById('Delete-btn').addEventListener('keyup',function (event) {
+          const text = event.target.value
+          console.log(text)  
+        })
+    </script>
+</body>
+</html>
