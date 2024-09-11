@@ -14,14 +14,14 @@ function SetBackGroundColor(elementId) {
     // element.classList.add('color-white')
 }
 
+
 const allClass = document.getElementsByClassName('common-btn');
 let count = 40;
 let seat = 0
 for( const Class of allClass){
 Class.addEventListener('click',function(e){
   count = count-1;
-  SetInnerText('seat-counter',count)
-
+  SetInnerText('seat-counter',count);
   const price = document.getElementById('Seat-price').innerText;
 
   const SeatName = e.target.innerText;
@@ -47,7 +47,6 @@ const ConvertedTotalPrice = parseInt(totalPrice);
 const sum = ConvertedTotalPrice + parseInt(seatPrice);
 SetInnerText('total-money', sum);
 
-
 const grandTotal = document.getElementById('Grand-price').innerText;
 const ConvertedGrandTotalPrice = parseInt(grandTotal);
 const sum2 = ConvertedGrandTotalPrice + parseInt(seatPrice);
@@ -61,7 +60,6 @@ Class.addEventListener('click', function(e){
     
 })
 }
-
 
 // function CouponCard(params) {
 //     document.getElementById('delete-confirm').addEventListener('keyup',function (event) {
